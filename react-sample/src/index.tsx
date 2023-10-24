@@ -7,15 +7,18 @@ import Name from './components/Name';
 import Message from './Message';
 import Parent from './ContainerSample';
 import Page from './ContextSample';
-import Counter from './Reducer';
+import { FizzBuzz } from './Parent';
+import { Counter } from './Counter';
+import { UseMemoSample } from './UseMemoSample';
+import { Clock } from './Clock';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <Counter initValue={0}/>
-  </React.StrictMode>
+  // <React>
+    <Clock/>
+  // </React>
 );
 
 // If you want to start measuring performance in your app, pass a function
