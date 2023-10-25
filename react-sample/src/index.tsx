@@ -11,13 +11,16 @@ import { FizzBuzz } from './Parent';
 import { Counter } from './Counter';
 import { UseMemoSample } from './UseMemoSample';
 import { Clock } from './Clock';
+import { ImageUploader } from './ImageUploader';
+import { Input } from './UseInputSample';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   // <React>
-    <Clock/>
+    // <ImageUploader/>
+    <Input/>
   // </React>
 );
 
