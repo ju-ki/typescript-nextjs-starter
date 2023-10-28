@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from "next"
 import Head from "next/head"
+import Link from "next/link"
 import { useRouter } from "next/router"
 
 type ISRPros = {
@@ -23,6 +24,7 @@ const ISR: NextPage<ISRPros> = (props) => {
             <main>
                 <p>Created by ISR</p>
                 <p>{message}</p>
+                <Link href="/ssr">SSRへ</Link>
             </main>
         </div>
     )
