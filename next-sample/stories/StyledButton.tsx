@@ -2,19 +2,19 @@ import styled, {css} from "styled-components"
 
 const variants = {
     primary:{
-        color:"red",
-        backgroundColor:"blue",
+        color:"#ffffff",
+        backgroundColor:"#1D3461",
         border:"none"
     },
     success:{
         color:"#ffffff",
-        backgroundColor:"green",
+        backgroundColor:"#5AB203",
         border:"none"
     },
     transparent:{
         color:"#111111",
         backgroundColor:"transparent",
-        border:"1px solid red"
+        border:"1px solid black"
     },
 } as const
 
@@ -28,12 +28,13 @@ export const StyledButton = styled.button<StyledButtonProps>`
         const style = variants[variant];
         return css`
             color:${style.color};
+            background-color:${style.backgroundColor};
             border:${style.border};
-        `;
+        `
     }}
 
 
-    border-radius:100px;
+    border-radius:12px;
     font-size:14px;
     height:38px;
     line-height:22px;
