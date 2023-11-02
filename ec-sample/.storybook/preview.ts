@@ -7,16 +7,26 @@ const GlobalStyles = createGlobalStyle`
   /* ここにグローバルスタイルを定義 */
 `;
 
-export const decorators = [
-  (Story: React.ComponentType) => (
-    <>
-      <GlobalStyles />
-      <ThemeProvider theme={theme}>
-        <Story />
-      </ThemeProvider>
-    </>
-  ),
-];
+const parser = require("@babel/parser");
+const babel = require("@babel/core");
+
+const code = "your JavaScript code here";
+const options = {
+  // Babelのオプションを指定
+};
+
+
+
+// export const decorators = [
+//   (Story: React.ComponentType) => (
+//     <>
+//       <GlobalStyles />
+//       <ThemeProvider theme={theme}>
+//         <Story />
+//       </ThemeProvider>
+//     </>
+//   )
+// ];
 
 // その他の Storybook パラメータの設定
 export const parameters = {
