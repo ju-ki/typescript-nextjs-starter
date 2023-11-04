@@ -1,2 +1,3 @@
 ts-nextbook-json/*
-node_modules
+# node_modules
+/ts-nextbook-app
