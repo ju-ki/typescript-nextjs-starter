@@ -10,9 +10,9 @@ import type, {
     CSSPropertyFlexWrap,
     CSSPropertyAlignSelf,
     Responsive,
-} from "@/types/styles";
+} from "types/styles";
 
-import { toPropValue } from "@/utils/styles";
+import { toPropValue } from "utils/styles";
 
 type FlexProps = BoxProps & {
     alignItems?:Responsive<CSSPropertyAlignItems>

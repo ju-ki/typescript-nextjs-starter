@@ -8,7 +8,7 @@ import {
 import {
     theme
 } from '../src/themes'
-// import * as NextImage from 'next/image'
+import * as NextImage from 'next/image'
 
 export const parameters = {
     actions: {
@@ -54,13 +54,22 @@ addDecorator((story) => ( <
 ))
 
 // // next/imageの差し替え
-// const OriginalNextImage = NextImage.default;
+const OriginalNextImage = NextImage.default;
 
-// Object.defineProperty(NextImage, 'default', {
-//   configurable: true,
-//   value: (props) => typeof props.src === 'string' ? (
-//     <OriginalNextImage {...props} unoptimized blurDataURL={props.src} />
-//   ) : (
-//     <OriginalNextImage {...props} unoptimized />
-//   ),
-// })
+Object.defineProperty(NextImage, 'default', {
+    configurable: true,
+    value: (props) => typeof props.src === 'string' ? ( <
+        OriginalNextImage {
+            ...props
+        }
+        unoptimized blurDataURL = {
+            props.src
+        }
+        />
+    ) : ( <
+        OriginalNextImage {
+            ...props
+        }
+        unoptimized / >
+    ),
+})
